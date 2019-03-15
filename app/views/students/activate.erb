@@ -1,0 +1,14 @@
+
+<h1>Change Student Status:</h1>
+
+<form action="/students/:id/" method="post">
+<input type="hidden" id="hidden" name="_method" value="patch">
+<%if @student.active == true%>
+<input type="radio" name="student_status" value="true" checked> Active
+<input type="radio" name="student_status" value="false"> Inactive
+<% else %>
+<input type="radio" name="student_status" value="true"> Active
+<input type="radio" name="student_status" value="false" checked> Inactive
+<% end %>
+<input type="submit" id="Submit">
+</form>
